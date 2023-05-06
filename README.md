@@ -10,6 +10,12 @@ So in other words, only bigger servers should be using ZGC.
 ## Suggested ZGC flags:
 ``java -Xms8G -Xmx8G -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:+PerfDisableSharedMem -XX:-ZUncommit -XX:+ParallelRefProcEnabled -jar purpur.jar --nogui``
 
+Please keep in mind that using other flags will either:
+1. Increase general CPU usage and provide minimal GC performance gains
+2. Lower general CPU usage but have the possibility of the GC being overwhelmed.
+
+Overall, it's best to not change these flags unless you know exactly what you're doing and have a specific reason for changing them. The only known exception to this would be the -XX:+UseLargePages flag, which was not included due it needing some setup beforehand.
+
 ### Important notes:
 - Change -Xmx/-Xms to however much ram (In GBs) you wish to give the server.
 - Change purpur.jar to the name of the jar file you're using.
