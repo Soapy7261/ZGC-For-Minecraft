@@ -13,7 +13,7 @@ So in other words, only bigger servers should be using ZGC.
 ### Important notes:
 - Change -Xmx/-Xms to however much ram (In GBs) you wish to give the server.
 - Change purpur.jar to the name of the jar file you're using.
-- A "+" means that flag is being specifically enabled, while a "-" means that flag is specifically being disabled.
+- A "+" means that flag is being specifically enabled, while a "-" means that flag is being specifically disabled.
 
 ### Reasoning for each flag:
 -Xms and -Xmx are matching as it prevents any performance issues from occuring due to requesting additional memory from the OS and lessens the amount of work the GC has to do before getting additional memory.
