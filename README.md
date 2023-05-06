@@ -26,7 +26,7 @@ So in other words, only bigger servers should be using ZGC.
 
 -XX:+AlwaysPreTouch - Sets up and reserves the memory upon startup. Improves efficiency and access speed.
 
--XX:+PerfDisableSharedMem - Prevents the GC to file system, reducing the amount of lag due to I/O. See [here](https://www.evanjones.ca/jvm-mmap-pause.html)
+-XX:+PerfDisableSharedMem - Prevents the GC from writing to file system, reducing the amount of lag due to I/O. See [here](https://www.evanjones.ca/jvm-mmap-pause.html)
 
 -XX:-ZUncommit - Prevents ZGC from uncommiting memory and returning it to the OS.
 
