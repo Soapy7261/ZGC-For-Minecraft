@@ -1,7 +1,7 @@
 # ZGC For Minecraft
 ## Preface
 Be warned that it's commonly taken that ZGC must be finely tuned to the machine you're using. This may or may not be true, but if the suggested flags happen to not work on your machine, you may have to change them accordingly.
-It is also highly suggested to only use ZGC on java 1.17 and up.
+It is also highly suggested to only use ZGC on java 17 and up.
 ## What is ZGC?
 ZGC stands for Z Garbage Collector, a garbage collector, put simply, is a thing that frees up memory for further use within your server. There are a few GCs as well as a number of flags (options) you can use to change how it runs. A common set of GC flags is Aikars flags, but they have their limits since as good as they may be, the GC still has to pause the server to run. ZGC fixes this however, by running mostly in alongside the server, instead of pausing it each time it has to run.
 ## Who should use ZGC?
