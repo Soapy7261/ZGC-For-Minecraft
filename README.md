@@ -20,7 +20,7 @@ So in other words, only bigger servers should be using ZGC.
 
 -XX:+UnlockExperimentalVMOptions - is required for many of the other flags.
 
--XX:+UseZGC - enables ZGC
+-XX:+UseZGC - Enables ZGC
 
 -XX:+DisableExplicitGC - Prevents plugins and other code from messing with the GC.
 
@@ -36,7 +36,7 @@ So in other words, only bigger servers should be using ZGC.
 
 See [here](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html) for most generic flags.
 
--XX:+UseLargePages - Basically improves performance for no downsides. May require some setup however
+-XX:+UseLargePages - Literally just improves performance with no downsides. Requires some setup however
 
 -XX:+UseTransparentHugePages - In Aikars words: "Controversial feature but may be usable if you can not configure your host for real HugeTLBFS. We have not measured how THP works for MC or its impact with AlwaysPreTouch, so this section is for the advanced users who want to experiment."
 
