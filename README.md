@@ -8,7 +8,7 @@ ZGC stands for Z Garbage Collector, a garbage collector, put simply, is a thing 
 ZGC requires the allocation of a large amount of memory, due to this ZGC is best suited for servers with *at least* 8gb of memory allocated, which is fine as anything under that can use G1GC without issues anyhow. Be warned however that ZGC may cause the usage of more memory, and extensive testing hasn't been done yet, so more ram may have to be allocated.
 So in other words, only bigger servers should be using ZGC.
 ## Suggested ZGC flags:
-``java -Xms8G -Xmx8G -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:+PerfDisableSharedMem -XX:-ZUncommit -XX:+ParallelRefProcEnabled -jar purpur.jar --nogui``
+``java -Xms8G -Xmx8G -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:+PerfDisableSharedMem -XX:-ZUncommit -XX:+ParallelRefProcEnabled -jar server.jar --nogui``
 
 Please keep in mind that using other flags will either:
 1. Increase general CPU usage and provide minimal GC performance gains
@@ -18,7 +18,7 @@ Overall, it's best to not change these flags unless you know exactly what you're
 
 ### Important notes:
 - Change -Xmx/-Xms to however much ram (In GBs) you wish to give the server.
-- Change purpur.jar to the name of the jar file you're using.
+- Change server.jar to the name of the jar file you're using.
 - A "+" means that flag is being specifically enabled, while a "-" means that flag is being specifically disabled.
 
 ### Reasoning for each flag:
