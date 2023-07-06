@@ -1,6 +1,6 @@
 # ZGC For Minecraft
 ## Preface
-Be warned that it's commonly taken that ZGC must be finely tuned to the machine you're using. While this can be true for java versions below 17, any such settings now dynamic, and therefore shouldn't need to be configured.
+Be warned that it's commonly taken that ZGC must be finely tuned to the machine you're using. While this can be true for java versions below 17, any such settings are now dynamic, and therefore shouldn't need to be configured.
 ## What is ZGC?
 ZGC stands for Z Garbage Collector, a garbage collector, put simply, is a thing that frees up memory for further use within your server. There are a few GCs as well as a number of flags (options) you can use to change how it runs. A common set of GC flags is Aikars flags, but they have their limits since as good as they may be, the GC still has to pause the server to run. ZGC fixes this however, by running mostly in alongside the server, instead of pausing it each time it has to run.
 ## Who should use ZGC?
@@ -57,7 +57,7 @@ See [here](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html) f
 
 -XX:ZProactive - Whether to enable active recycling. Set to true by default
 
--XX:+UseNUMA - Enabled NUMA support. Automatically set according to the machine by default. Use this flag to force it to be enabled/disabled. 
+-XX:UseNUMA - Enabled NUMA support. Automatically set according to the machine by default. Use this flag to force it to be enabled/disabled. 
 
 -XX:ZUncommitDelay - Sets the amount of time (in seconds) that heap memory must have been idle before being uncommitted (ZUncommit must be enabled). Default is 300
 
